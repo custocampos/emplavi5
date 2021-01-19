@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once __DIR__ ."./../model/db_connect.php";
 
 
 $result=(array)json_decode(getUser($id));
