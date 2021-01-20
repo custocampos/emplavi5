@@ -188,7 +188,7 @@ function getDeal($id,$emp)
         $queryData = http_build_query(array(
             'ID' => $idDeal,
             'fields' => array(
-                "UF_CRM_1608035727" => $idCor,
+                "ASSIGNED_BY_ID" => $idCor,
                 ),
         ));
 
