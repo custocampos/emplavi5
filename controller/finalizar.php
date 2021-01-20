@@ -1,18 +1,5 @@
 <?php
 session_start();
-require_once __DIR__ ."./../model/db_connect.php";
-
-
-$result=(array)json_decode(getUser($id));
-$result=(array)$result["result"];
-$name=$result["NAME"];
-
-
-if(!empty($result["LAST_NAME"])){
-$sobrenome=$result["LAST_NAME"];
-}else{
-$sobrenome="";
-};
 
 require_once __DIR__ ."./../model/db_connect.php";
 
@@ -26,34 +13,11 @@ if(!empty($_GET["ger"]) && empty($_POST["gerente"])){
 
 
 if(!empty($_GET["cor"])){
-    $result=(array)json_decode(getUser($_GET["cor"]));
-    $result=(array)$result["result"];
-    $name=$result["NAME"];
-
-
-    if(!empty($result["LAST_NAME"])){
-        $sobrenome=$result["LAST_NAME"];
-        updateDeal($dealID,$name." ".$sobrenome);
-            }else{
-                updateDeal($dealID,$name);
-            };
-    
-
-            
+    updateDeal($dealID,$_GET["cor"]);
 
 }else{
 
-    $result=(array)json_decode(getUser($_POST["correID"]));
-    $result=(array)$result["result"];
-    $name=$result["NAME"];
-
-
-    if(!empty($result["LAST_NAME"])){
-        $sobrenome=$result["LAST_NAME"];
-        updateDeal($dealID,$name." ".$sobrenome);
-            }else{
-                updateDeal($dealID,$name);
-            };
+    updateDeal($dealID,$_POST["correID"]);
 };
 
 $data=array(
@@ -70,13 +34,13 @@ $data=array(
 
 
 
-$result2=(array)json_decode(createElement($data));
+$result=(array)json_decode(createElement($data));
 
-$idElement=$result2["result"];
+$idElement=$result["result"];
 
 workStart($idElement);
 
-if(!empty($result2["result"])){
+if(!empty($result["result"])){
     $_SESSION['mensagem2']="Visita Cadastrada com sucesso!";
    
     header('location: ./../index.php');
