@@ -94,6 +94,9 @@ $_SESSION['phone']=$arrayIdent["phone"];
 $_SESSION['idEmail']=$arrayIdent["idEmail"];
 $_SESSION['idPhone']=$arrayIdent["idPhone"];
 
+echo "<pre>";
+var_dump($arrayIdent["id"]);
+
 
 include __DIR__."/form_busca.php";
 
