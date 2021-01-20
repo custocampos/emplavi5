@@ -217,6 +217,7 @@ function getDeal($id,$emp)
                 "TYPE_ID"=> "SALE",
                 "CATEGORY_ID" => "18",
                 'CONTACT_ID' => $contato,
+                "SOURCE_ID" => "10",
                 "UF_CRM_1604688211"=> $emp
             ),
         ));
