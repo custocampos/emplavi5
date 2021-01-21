@@ -35,9 +35,9 @@ while($a<1){
     $InfCont=(array)$InfCont["result"];
     
 //     sleep(1);
-    echo "<pre>";
-    var_dump($cont); 
-    var_dump($a);
+//     echo "<pre>";
+//     var_dump($cont); 
+//     var_dump($a);
     
 
     if(empty($InfCont)){
