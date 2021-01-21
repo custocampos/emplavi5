@@ -41,7 +41,7 @@ while($a<1){
     
 
     if(empty($InfCont)){
-        $a=1;
+        $a=2;
     }else{
         $a=0;
         foreach($InfCont as $data){
