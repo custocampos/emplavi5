@@ -29,7 +29,7 @@ $arrayIdent["phone"]=[];
 $arrayIdent["idEmail"]=[];
 $arrayIdent["idPhone"]=[];
 
-while($a<0){
+while($a<1){
 
     $InfCont=(array)json_decode(listContact($cont));
     $InfCont=(array)$InfCont["result"];
