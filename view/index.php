@@ -37,6 +37,7 @@ while($a==0){
     sleep(1);
     echo "<pre>";
     var_dump($cont); 
+    var_dump($InfCont);
     
 
     if(empty($InfCont)){
