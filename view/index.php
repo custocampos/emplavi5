@@ -29,21 +29,21 @@ $arrayIdent["phone"]=[];
 $arrayIdent["idEmail"]=[];
 $arrayIdent["idPhone"]=[];
 
-while($a==0){
+while($a<0){
 
     $InfCont=(array)json_decode(listContact($cont));
     $InfCont=(array)$InfCont["result"];
     
 //     sleep(1);
-//     echo "<pre>";
-//     var_dump($cont); 
-//     var_dump($a);
+    echo "<pre>";
+    var_dump($cont); 
+    var_dump($a);
     
 
     if(empty($InfCont)){
         $a=1;
     }else{
-
+        $a=0;
         foreach($InfCont as $data){
             $IdTaskk=$data->ID;
             $cont=$IdTaskk;
