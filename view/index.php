@@ -34,10 +34,10 @@ while($a==0){
     $InfCont=(array)json_decode(listContact($cont));
     $InfCont=(array)$InfCont["result"];
     
-    sleep(1);
-    echo "<pre>";
-    var_dump($cont); 
-    var_dump($a);
+//     sleep(1);
+//     echo "<pre>";
+//     var_dump($cont); 
+//     var_dump($a);
     
 
     if(empty($InfCont)){
