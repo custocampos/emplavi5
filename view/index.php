@@ -21,7 +21,7 @@ $arrayAssoc2=[];
 $arrayAssoc3=[];
 
 $cont=0;
-$a=0;
+$a=true;
 $arrayIdent["id"]=[];
 $arrayIdent["nome"]=[];
 $arrayIdent["email"]=[];
@@ -29,7 +29,7 @@ $arrayIdent["phone"]=[];
 $arrayIdent["idEmail"]=[];
 $arrayIdent["idPhone"]=[];
 
-while($a<1){
+while($a){
 
     $InfCont=(array)json_decode(listContact($cont));
     $InfCont=(array)$InfCont["result"];
@@ -41,7 +41,7 @@ while($a<1){
     
 
     if(empty($InfCont)){
-        $a=2;
+        $a=false;
     }else{
         $a=0;
         foreach($InfCont as $data){
